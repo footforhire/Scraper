@@ -30,3 +30,14 @@ https://www.tidyverse.org/
 and
 
 https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/
+
+# Troubleshooting
+
+When executing docker run for an image with firefox browser please set shm-size to 2g. See https://github.com/SeleniumHQ/docker-selenium/pull/485/files# for more info.
+
+``` bash
+$ docker run -d -p 4444:4444 --shm-size 2g selenium/standalone-firefox:##ANY##
+```
+where ##ANY## is the version of firefox that you're using
+
+This is a workaround to node-firefox crash in docker container issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1338771#c10
