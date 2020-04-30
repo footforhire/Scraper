@@ -1,9 +1,12 @@
-#load rselenium if you haven't already
+## ----Load Required Packages----
+
+# load rselenium if you haven't already
 library(RSelenium)
 
-#load tidyverse
+# load tidyverse
 library(tidyverse)
 
+## ----Start Driver and navigate to target page----
 #clean workspace
 remove(list = ls())
 
@@ -27,15 +30,15 @@ remDr$navigate("https://news.google.com")
 #wait for page to load
 Sys.sleep(5)
 
-#where we are
-remDr$screenshot(display = TRUE)
+#where we are. uncomment for MORE verbosity. not recommended
+#remDr$screenshot(display = TRUE)
 
 #wait for image to render
 Sys.sleep(4)
 
 #fin startup
 
-#BEGIN THE SCRAPE CODE
+## ----BEGIN THE SCRAPE CODE----
 #find/name the search box
 webElem1 <- remDr$findElement(using = "class", value = "Ax4B8")
 
@@ -67,6 +70,7 @@ linkHref <- sapply(
 #close the session so it doesn't break --we have all the info we need from selenium
 remDr$close()
 
+## ----Create the spreadsheet----
 #create data.frame of links
 linkDataFrame<- data.frame(matrix(unlist(linkHref), nrow = length(linkHref), byrow = TRUE), stringsAsFactors = FALSE)
 #create data.frame of headings
