@@ -4,6 +4,8 @@ The vision for this tool is to be able to create an automated digest of open sou
 I envision either a shiny application hosted somewhere or an automated email to which one can subscribe,
 or updating a WordPress page with two or three open source article a day.
 
+As of 30 Apr 2020, this is a proof of concept project ONLY. If you would like to contribute, or if you have any ideas on how to improve this tool, please email me at marknitz@gmail.com or send me a pull request.
+
 # Required R packages
 
 RSelenium
@@ -38,6 +40,16 @@ https://www.tidyverse.org/
 and
 
 https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/
+
+# The Way Forward
+
+I'm hoping to compile most of the information that I get from this tool into a WordPress and/or subscription emailer. I've looked at continuing to utilize docker machines in order to work in a static environment, and then interact with the WordPress application through the docker image and utilizing other R packages as indicated here
+
+https://rpubs.com/pbaumgartner/r2wp
+
+in order to create WordPress posts from our filtered results.
+
+As of 30 Apr 2020, I am working on identifying the new news articles from the previous pull and posting ONLY the new articles to a single WordPress post. This should only result in a couple of articles being posted. The format at this point is unimportant, but will be refined along the line.
 
 # Troubleshooting
 
