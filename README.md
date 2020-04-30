@@ -14,11 +14,19 @@ More information on this can be found at
 
 https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html
 
+and 
+
+https://rpubs.com/johndharrison/RSelenium-Docker
+
 Based on that walkthrough, it is also advised that you invest some time
 in learning how to utilize Docker. You can find out more about Docker and its
 capabilities at
 
 https://www.docker.com/products/docker-desktop
+
+More information on fusing the two in order to make this script work can be found here
+
+https://rpubs.com/johndharrison/RSelenium-Docker
 
 tidyverse is a suite of tools created by Hadley Wickham that allow a wide range
 of functions to be called on data. Currently, dplyr is the only package that
